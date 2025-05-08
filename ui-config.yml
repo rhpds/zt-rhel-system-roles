@@ -1,0 +1,24 @@
+---
+antora:
+  name: modules
+  dir: www
+  modules:
+    - name: "01-subscribe-ansible"
+      label: "Subscribe Ansible"
+      solveButton: true
+    - name: "02-inspect"
+      label: "Inspect"
+      solveButton: true
+    - name: "03-swappiness"
+      label: "Swappiness"
+      solveButton: true
+    - name: "04-new-role"
+      label: "New Role"
+      solveButton: true
+    - name: "05-update-setting"
+      label: "Update Setting"
+      solveButton: true
+
+tabs:
+  - name: ">_ terminal"
+    url: /wetty
