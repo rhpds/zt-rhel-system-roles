@@ -1,3 +1,5 @@
+:imagesdir: ../assets/images
+
 == Inspect the playbook
 
 To get started, an already created playbook has been created that uses
@@ -11,6 +13,9 @@ cat soe.yml
 ----
 
 The output should look like this.
+
+.SOE playbook
+image::soe-yaml.png[SOE playbook]
 
 From the above output, this playbook will only affect `+localhost+`.
 Also, at the bottom, you will notice the roles included,
@@ -34,20 +39,36 @@ cat /proc/sys/vm/swappiness
 
 The output should be
 
-After you run the playbook, the swappiness value should be updated to be
-20.
+.Current swappiness value
+image::swappiness-output.png[Current swappiness value]
 
-____
+Let's run the playbook to apply the system roles to `+localhost+`.
+
+[source,bash,run]
+----
+ansible-playbook soe.yml
+----
+
+.Playbook run
+image::playbook-run.png[Playbook run]
+
+After you run the playbook, the swappiness value should be updated to be
+20. You can verify this by running the following command.
+
+[source,bash,run]
+----
+cat /proc/sys/vm/swappiness
+----
+
+.Updated swappiness value
+image::swappiness-updated.png[Updated swappiness value]
+
 NOTE: swappiness is a setting that determines the kernel’s preference
 for using swap space on the system, the value is between 0-100. The
 smaller the value, the less preference the kernel has for utilizing swap
 space.
-____
 
-Let’s apply these roles to `+localhost+` and `+client1+`. We need to
-create a `+hosts.ini+` file specifying the hostname `+client1+`. This
-host will be part of the `+clients+` group. For localhost, we’ll specify
-that ansible should execute the playbook locally.
+Let’s apply these roles to `+client1+`. We need to create a `+hosts.ini+` file specifying the hostname `+client1+`. This host will be part of the `+clients+` group. For localhost, we’ll specify that ansible should execute the playbook locally.
 
 [source,bash,run]
 ----
@@ -65,6 +86,9 @@ cat hosts.ini
 
 The `+hosts.ini+` should contain the following.
 
+.hosts.ini
+image::hosts-ini.png[hosts.ini]
+
 Edit the `+soe.yml+` playbook to add the `+clients+` host group. This
 tells ansible to apply the system roles in `+soe.yml+` to `+localhost+`
 and `+client1+`.
@@ -80,6 +104,11 @@ Check the soe.yml file.
 ----
 cat soe.yml
 ----
+
+Here's the updated soe.yml file.
+
+.Updated soe.yml
+image::soe-yaml-updated.png[Updated soe.yml]
 
 Now run the playbook again to apply the system roles to the clients
 group.

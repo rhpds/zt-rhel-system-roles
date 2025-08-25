@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# sudo -i
-# cd /root
 tee -a /root/soe.yml << EOF
 ---
 - hosts: localhost
