@@ -23,9 +23,9 @@ Also, at the bottom, you will notice the roles included,
 Because these are the only roles included in the playbook, the `+vars+`
 section has variables that are used by these roles.
 
-The `+vars+` under the kernel_settings_sysctl section are the values of
+The `+vars+` under the `+kernel_settings_sysctl+` section are the values of
 parameters to set on the system to change kernel tunables in the
-/proc/sys directory structure. The tlog_scope_sssd setting will enable
+`+/proc/sys+` directory structure. The `+tlog_scope_sssd+` setting will enable
 session recording for all users on the system.
 
 Before you run the playbook and adjust the settings of the system,
