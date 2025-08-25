@@ -6,6 +6,8 @@ Red Hat Enterprise Linux System Roles are a collection of supported
 Ansible roles that ensure consistent workflows and streamline the
 execution of manual tasks.
 
+This lab consists of two hosts, `+rhel+` and `+client1+`. The `+rhel+` host is the Ansible controller and the `+client1+` host is the Ansible managed node. We'll be using the `+rhel+` host to run the Ansible playbook but we'll be modifying the configurations of both hosts.
+
 First we’ll install the `+rhel-system-roles+` package. Copy and paste
 the command below into *> rhel*.
 
@@ -13,6 +15,8 @@ You can also run the following command in the terminal by clicking on this icon 
 
 .Run the command in the terminal
 image::run-command.png[Run the command in the terminal]
+
+Try it now.
 
 [source,bash,run]
 ----
