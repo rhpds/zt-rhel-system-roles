@@ -1,3 +1,5 @@
+:imagesdir: ../assets/images
+
 == Install RHEL System Roles
 
 Red Hat Enterprise Linux System Roles are a collection of supported
@@ -13,3 +15,6 @@ dnf -y install rhel-system-roles
 ----
 
 Here’s what the result should look similar to.
+
+.Installation of rhel-system-roles
+image::system-roles-install.png[RHEL System Roles install]
