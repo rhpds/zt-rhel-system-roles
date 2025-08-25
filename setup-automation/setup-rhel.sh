@@ -2,7 +2,7 @@
 
 # sudo -i
 # cd /root
-tee -a soe.yml << EOF
+tee -a /root/soe.yml << EOF
 ---
 - hosts: localhost
   vars:
