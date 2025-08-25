@@ -1,3 +1,5 @@
+:imagesdir: ../assets/images
+
 == Add a new role
 
 In this step, you will be making changes to the playbook. To refresh
@@ -34,6 +36,9 @@ Take a look at the updated playbook.
 cat soe.yml
 ----
 
+.Updated soe.yml
+image::soe-yaml-updated-timesync.png[Updated soe.yml]
+
 When the playbook is next run, the system should be configured to use
 the time-d-b.nist.gov and a timeserver from the pool at ntp.org.
 
@@ -44,6 +49,9 @@ the system with `+chronyc+`.
 ----
 ssh client1 chronyc sources
 ----
+
+.Chronyc sources output
+image::chronyc-sources-output.png[Chronyc sources output for client1]
 
 Now execute the updated playbook to apply the changes you have added.
 
@@ -63,6 +71,9 @@ by using `+chronyc+`.
 ----
 ssh client1 chronyc sources
 ----
+
+.Chronyc sources output for client1
+image::chronyc-sources-output-updated.png[Chronyc sources output for client1]
 
 As expected, the system is now configured to use time-d-b.nist.gov and a
 system assigned from the pool at ntp.org.

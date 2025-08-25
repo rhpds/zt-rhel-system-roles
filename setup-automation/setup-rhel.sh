@@ -3,6 +3,7 @@
 tee -a /root/soe.yml << EOF
 ---
 - hosts: localhost
+  remote_user: root
   vars:
     kernel_settings_sysctl:
       - name: vm.swappiness

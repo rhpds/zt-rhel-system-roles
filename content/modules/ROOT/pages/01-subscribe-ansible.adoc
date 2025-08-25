@@ -7,7 +7,12 @@ Ansible roles that ensure consistent workflows and streamline the
 execution of manual tasks.
 
 First we’ll install the `+rhel-system-roles+` package. Copy and paste
-the command below into *> Shell*.
+the command below into *> rhel*.
+
+You can also run the following command in the terminal by clicking on this icon just above the code block below:
+
+.Run the command in the terminal
+image::run-command.png[Run the command in the terminal]
 
 [source,bash,run]
 ----

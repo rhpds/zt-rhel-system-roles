@@ -1,3 +1,5 @@
+:imagesdir: ../assets/images
+
 == Verify changes
 
 Now that the playbook has been applied to the system, verify that the
@@ -6,10 +8,13 @@ swappiness, but you could look at any of the included parameters.
 
 [source,bash,run]
 ----
-cat /proc/sys/vm/swappiness
+ssh root@client1 cat /proc/sys/vm/swappiness
 ----
 
 The result should be the following.
+
+.Swappiness output for client1
+image::swappiness-output-client1.png[Swappiness output for client1]
 
 As expected, the setting is now 20 instead of what it started as in the
 beginning of the lab.
@@ -23,6 +28,9 @@ ssh -o "StrictHostKeyChecking no" rhel@localhost
 ----
 
 Here’s the output.
+
+.Session recording output
+image::session-recording-output.png[Session recording output]
 
 To complete this section enter the following.
 
