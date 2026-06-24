@@ -40,6 +40,12 @@ been applied to the system.
 ssh client1 cat /proc/sys/vm/swappiness
 ----
 
+[source,text]
+----
+[root@rhel ~]# ssh client1 cat /proc/sys/vm/swappiness
+10
+----
+
 This lab has focused on building a playbook using RHEL system roles to
 generate a standard set of configuration for the system, then using that
 playbook to make further changes to the system. Now that you have a

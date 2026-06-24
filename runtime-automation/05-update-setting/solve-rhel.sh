@@ -1,2 +1,5 @@
 #!/bin/sh
-echo "Solved module called 05-update-setting" >> /tmp/progress.log
+
+sed -ie 's/value: 20/value: 10/' soe.yml
+
+ansible-playbook soe.yml -i hosts.ini

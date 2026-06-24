@@ -39,9 +39,14 @@ To complete this section enter the following.
 exit
 ----
 
-You should have seen dialog similar to the output shown above. Success!
+You should have seen dialog similar to the output shown above.
+
+[source,text]
+----
+Success!
 the system is now recording terminal sessions for users connecting to
 it.
+----
 
 For `+client1+`, repeat the following command.
 
