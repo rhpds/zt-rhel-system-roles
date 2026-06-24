@@ -1,2 +1,7 @@
 #!/bin/sh
-echo "Solved module called 03-swappiness" >> /tmp/progress.log
+
+ssh root@client1 cat /proc/sys/vm/swappiness
+
+ssh -o "StrictHostKeyChecking no" rhel@localhost exit
+
+ssh -o "StrictHostKeyChecking no" rhel@client1 exit
